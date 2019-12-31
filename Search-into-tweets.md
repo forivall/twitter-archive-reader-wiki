@@ -87,7 +87,7 @@ TweetSearcher.static_validators.retweets_only = validateOnlyRetweets;
 
 You've done it!
 
-### Define a custom validator
+### Define a custom contextual validator
 
 Now, we will see how to define a *context-dependent* validator. This validator must "mutate" at each search, because it will depend of user-context.
 
@@ -100,7 +100,7 @@ This function return a closure which validate the custom query entered by user.
 
 It will be more clear with an example !
 
-#### Building our validator creator
+#### Building our contextual validator creator
 
 Imagine we want to create a validator `since:YYYY-MM-DD` to check if a tweet is made after a user-defined date.
 
