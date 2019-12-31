@@ -106,9 +106,6 @@ interface DirectMessage {
   /** 
    * Array of URLs linked to this direct message. 
    * Currently, a DM could only contain **one** media. 
-   * 
-   * To display images/medias linked in this property, use 
-   * **.dmImageFromUrl()** method in the `TwitterArchive` instance.
    */
   mediaUrls: string[];
   /** Person who send the DM (Twitter user ID). */
@@ -126,7 +123,9 @@ interface DirectMessage {
 
 Interface `LinkedDirectMessage`, that validate DMs in `Conversation` objects, add a `.previous` and `.next` property, linking the following and previous DM in the current conversation.
 
+To get medias linked in one message, please see [Get a direct message media](https://github.com/alkihis/twitter-archive-reader/wiki/Get-a-direct-message-media).
+
 ## Continue
 
-Next part is 
+Next part is [Get a direct message media](https://github.com/alkihis/twitter-archive-reader/wiki/Get-a-direct-message-media)
 
