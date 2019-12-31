@@ -1,5 +1,3 @@
-# Archive properties
-
 You can explore archive properties (creation date, owner...) by using the `TwitterArchive` instance.
 
 ## Properties / Accessors
