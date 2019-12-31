@@ -11,8 +11,8 @@ TweetSearcher.search(archive.all, "My query");
 TweetSearcher is an instance with a main method search.
 ```ts
 TweetSearcher.search(
-  /* The tweets to search in */
-  tweets_array: PartialTweet[],
+  /* The tweets to search in (iterable, so array/generator/Set...) */
+  tweets_array: Iterable<PartialTweet>,
   /* The query, in string format */
   query: string,
   /* 
