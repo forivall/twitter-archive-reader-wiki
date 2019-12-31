@@ -150,3 +150,8 @@ Fires when read fails.
 Contain, in the `detail` attribute, the throwed error.
 
 Linked to `.ready()` promise (rejected).
+
+
+## Continue
+
+Next part is [Archive Properties](https://github.com/alkihis/twitter-archive-reader/wiki/Archive-properties). 
