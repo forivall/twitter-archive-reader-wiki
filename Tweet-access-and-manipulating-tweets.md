@@ -59,3 +59,6 @@ Functions exported in the module, to help you for manipulating tweets.
 
 
 ## Continue
+
+Next part is [Search into tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Search-into-tweets). 
+
