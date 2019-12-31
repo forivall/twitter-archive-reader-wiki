@@ -44,3 +44,9 @@ For details, see [Exploring Direct Messages medias]() part.
 
 - `.dmImage(name: string, is_group: boolean, as_array_buffer: boolean)`: Extract direct message file from its name (returns a `Promise<Blob | ArrayBuffer>`).
 - `.dmImageFromUrl(url: string, is_group: boolean, as_array_buffer: boolean)`: Extract direct message file from the Twitter media URL contained in `DirectMessage` object (returns a `Promise<Blob | ArrayBuffer>`).
+
+
+## Continue
+
+Next page is [Tweet access and manipulating tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Tweet-access-and-manipulating-tweets).
+
