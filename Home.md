@@ -37,9 +37,12 @@ First, we will see how initialize the main class of the module, how to explore t
 
 1) [Installation & Instantiation](https://github.com/alkihis/twitter-archive-reader/wiki/Installation-&-Instantiation)
 2) [Archive Properties](https://github.com/alkihis/twitter-archive-reader/wiki/Archive-properties)
-3) [Tweet access and manipulating tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Tweet-access-and-manipulating-tweets)
-4) [Search into tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Search-into-tweets)
-5) [Browsing Direct Message archive](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-Direct-Message-archive-(conversations))
-6) [Browsing a single DM conversation](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-a-single-DM-conversation)
-7) [Get a direct message media](https://github.com/alkihis/twitter-archive-reader/wiki/Get-a-direct-message-media)
+3) Tweets
+  1) [Tweet access and manipulating tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Tweet-access-and-manipulating-tweets)
+  2) [Search into tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Search-into-tweets)
+4) Direct Messages
+  1) [Browsing Direct Message archive](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-Direct-Message-archive-(conversations))
+  2) [Browsing a single DM conversation](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-a-single-DM-conversation)
+  3) [Get a direct message media](https://github.com/alkihis/twitter-archive-reader/wiki/Get-a-direct-message-media)
+
 
