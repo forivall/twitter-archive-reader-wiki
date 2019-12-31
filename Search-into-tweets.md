@@ -152,6 +152,6 @@ You don't need to re-define them.
 
 ## Continue
 
-Next part is [Archive Properties](https://github.com/alkihis/twitter-archive-reader/wiki/Archive-properties). 
+Next part is [IN PROGRESS]
 
 
