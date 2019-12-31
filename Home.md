@@ -39,3 +39,7 @@ First, we will see how initialize the main class of the module, how to explore t
 2) [Archive Properties](https://github.com/alkihis/twitter-archive-reader/wiki/Archive-properties)
 3) [Tweet access and manipulating tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Tweet-access-and-manipulating-tweets)
 4) [Search into tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Search-into-tweets)
+5) [Browsing Direct Message archive](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-Direct-Message-archive-(conversations))
+6) [Browsing a single DM conversation](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-a-single-DM-conversation)
+7) [Get a direct message media](https://github.com/alkihis/twitter-archive-reader/wiki/Get-a-direct-message-media)
+
