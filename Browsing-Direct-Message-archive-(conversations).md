@@ -44,5 +44,5 @@ Get a conversation who contains **every** message. This "breaks" the per-convers
 
 ## Continue
 
-Next part is [Browsing Direct Message archive](https://github.com/alkihis/twitter-archive-reader/wiki/Search-into-tweets)
+Next part is [Browsing a single DM conversation](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-a-single-DM-conversation)
 
