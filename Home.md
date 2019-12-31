@@ -34,3 +34,5 @@ Module will use a fallback to `big-integer` npm module if `BigInt` does not exis
 ## Table of contents
 
 First, we will see how initialize the main class of the module, how to explore tweets in it, then we will explore direct messages.
+
+I) [Installation & Instantiation](https://github.com/alkihis/twitter-archive-reader/wiki/Installation-&-Instantation)
