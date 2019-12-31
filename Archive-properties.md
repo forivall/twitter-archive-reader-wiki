@@ -40,7 +40,7 @@ For details for the inner types of this interface, see `ts/TwitterTypes.ts` file
 
 Specific methods:
 
-For details, see [Exploring Direct Messages medias]() part.
+For details, see [Get a direct message media](https://github.com/alkihis/twitter-archive-reader/wiki/Get-a-direct-message-media) part.
 
 - `.dmImage(name: string, is_group: boolean, as_array_buffer: boolean)`: Extract direct message file from its name (returns a `Promise<Blob | ArrayBuffer>`).
 - `.dmImageFromUrl(url: string, is_group: boolean, as_array_buffer: boolean)`: Extract direct message file from the Twitter media URL contained in `DirectMessage` object (returns a `Promise<Blob | ArrayBuffer>`).
