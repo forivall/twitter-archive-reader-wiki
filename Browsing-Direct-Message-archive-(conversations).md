@@ -8,7 +8,7 @@ The `DMArchive` object is a container for `Conversation`s objects.
 
 Please note that every conversation may have one or more participants and the screen name of each participant is unknown. Conversation are only aware of Twitter's user identifiers.
 
-Learn how to explore DMs in a `Conversation` object in [Explore a single conversation]().
+Learn how to explore DMs in a `Conversation` object in [Browsing a single DM conversation](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-a-single-DM-conversation).
 
 - `DMArchive.all: Conversation[]`
 
