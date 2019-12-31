@@ -37,3 +37,4 @@ First, we will see how initialize the main class of the module, how to explore t
 
 1) [Installation & Instantiation](https://github.com/alkihis/twitter-archive-reader/wiki/Installation-&-Instantiation)
 2) [Archive Properties](https://github.com/alkihis/twitter-archive-reader/wiki/Archive-properties)
+3) [Tweet access and manipulating tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Tweet-access-and-manipulating-tweets)
