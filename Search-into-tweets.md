@@ -56,14 +56,14 @@ TweetSearcher.search(
 
 First, you must know that TweetSearcher can enhance your search power with **validators**.
 
-A validator can be **non-static** (> dependent of current search, it is defined inside {query} parameter) or **static** (> shared in all searches, chosen if it will be applied in the {static_validators} parameter).
+A validator can be **contextual** (> dependent of current search, it is defined inside {query} parameter) or **static** (> shared in all searches, chosen if it will be applied in the {static_validators} parameter).
 
 You already know what's a static validator: we use it in the example before.
 
 - `retweets_only` is a static validator (it check only if the tweet is a retweet, no context is required).
 
-We now introduce **non-static** validators:
-- `from:{username}` is a non-static validator (it check if `from:(\S+)` is defined in {query} parameter, and extract {username} from it).
+We now introduce **contextual** validators:
+- `from:{username}` is a contextual validator (it check if `from:(\S+)` is defined in {query} parameter, and extract {username} from it).
 
 ### Define a custom static validator
 
