@@ -48,6 +48,30 @@ tweets.fromThatDay();
 
 Return the tweet with ID `id`.
 
+- `.index`
+
+Get the tweet index, by year then month, then tweet IDs.
+Example:
+```js
+{
+  // The year 2018
+  2018: { 
+    // The month of August
+    8: { 
+      // Tweets by IDs
+      10284781739: <PartialTweet>,
+      ...
+    },
+    ...
+  },
+  ...
+}
+``` 
+
+- `.id_index`
+
+Simple object associating `Tweet ID => PartialTweet` for all available tweets in the archive.
+
 ## Manipulation / helpers
 Static methods inside of `TweetArchive` class, to help you for manipulating tweets. 
 
