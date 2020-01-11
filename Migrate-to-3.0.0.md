@@ -20,6 +20,8 @@ Available methods/properties are the same as the old tweet access way of a `Twit
 ### TwitterArchive
 - `.index`: Tweet index is moved to `.tweets.index` and archive information/user to `.info`. It will be removed in a future release.
 
+**Tweet access properties and methods still exists on the `TwitterArchive` object, but are marked as deprecated. Please use the ones available on `TweetArchive`**.
+
 
 ## Changed
 ### TwitterArchive
