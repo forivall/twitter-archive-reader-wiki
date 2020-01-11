@@ -1,9 +1,10 @@
-A `TweetSearcher` instance is available to find tweets into `PartialTweet[]`.
+A `TweetSearcher` instance is available to find tweets into a `Iterable<PartialTweet>`.
 
 ```ts
 import { TweetSearcher } from 'twitter-archive-reader';
 
-TweetSearcher.search(archive.all, "My query");
+// archive.tweets is iterable, so its ok
+TweetSearcher.search(archive.tweets, "My query");
 ```
 
 ## Simple usage
@@ -44,7 +45,7 @@ So, you can use it like this example:
 // Search in all archive, a retweet containing a media, 
 // which has a text including "Hello" (case insensitive).
 TweetSearcher.search(
-  archive.all,
+  archive.tweets,
   "Hello",
   "i",
   ["retweets_only", "medias_only"],
