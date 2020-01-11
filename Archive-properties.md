@@ -2,12 +2,12 @@ You can explore archive properties (creation date, owner...) by using the `Twitt
 
 ## Properties / Accessors
 
-- `.length`: Number of tweets in archive.
+- `.tweets`: Access to the `TweetArchive` instance.
 - `.owner`: User ID of the archive owner.
 - `.owner_screen_name`: Screen name of the archive owner.
 - `.generation_date`: Archive creation date.
 - `.is_gdpr`: True if archive is a GDPR archive.
-- `.index`: Raw access to archive information / index. See `ArchiveIndex` interface.
+- `.info`: Access to archive information. See `BasicArchiveInfo` interface.
 
 ## GDPR archive specificities
 
