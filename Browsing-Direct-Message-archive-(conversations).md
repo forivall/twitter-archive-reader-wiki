@@ -36,6 +36,10 @@ Number of messages in this archive.
 
 Number of conversations in this archive.
 
+- `DMArchive.with(user_ids: string | string[]): Conversation[]`
+
+Get conversations that include all the specified user ids.
+
 - `DMArchive.dms: GlobalConversation`
 
 Get a conversation who contains **every** message. This "breaks" the per-conversation based system of the DMs.
