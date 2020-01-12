@@ -46,6 +46,16 @@ Get a conversation who contains **every** message. This "breaks" the per-convers
 
 *Warning*: First access to this property cause the creation of the `GlobalConversation` instance, which need to index every message one by one, by ID and by date. This could be time-consuming **and** memory inefficient if the number of direct messages is very large, so please take care !
 
+- `Symbol.iterator`
+
+Instances of `DMArchive` are iterable.
+
+```ts
+for (const conversation of archive.messages) {
+  // conversation is a Conversation instance
+}
+```
+
 ## Continue
 
 Next part is [Browsing a single DM conversation](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-a-single-DM-conversation)
