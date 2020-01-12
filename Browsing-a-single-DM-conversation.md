@@ -55,6 +55,16 @@ conversation.around("19472928432");
 }
 ```
 
+- `Symbol.iterator`
+
+Instances of `Conversation` are iterable.
+
+```ts
+for (const message of conversation) {
+  // message fulfill LinkedDirectMessage interface
+}
+```
+
 - Chaining
 
 You can chain methods that returns `SubConversation` objects.
