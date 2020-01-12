@@ -18,6 +18,16 @@ tweets.all.slice(0, 30)
 tweets.length
 ```
 
+- `Symbol.iterator`
+
+`TweetArchive` instance is iterable.
+
+```ts
+for (const tweet of archive.tweets) {
+  // tweet fulfill PartialTweet interface
+}
+```
+
 - `.between(since: Date, until: Date)`
 
 Find tweets between two dates.
