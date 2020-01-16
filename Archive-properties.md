@@ -3,7 +3,7 @@ You can explore archive properties (creation date, owner...) by using the `Twitt
 ## Properties / Accessors
 
 - `.tweets`: Access to the `TweetArchive` instance.
-- `.user`: 
+- `.user`: Access to the `UserData` instance (see it in the next part)
 - `.generation_date`: Archive creation date.
 - `.is_gdpr`: True if archive is a GDPR archive.
 - `.info`: Access to archive information. See `BasicArchiveInfo` interface.
