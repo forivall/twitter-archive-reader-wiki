@@ -14,6 +14,9 @@ and a final argument (boolean) if the function should return an `ArrayBuffer` in
 - `.dmImage`: Get an image from an image name. 
 - `.dmImageFromUrl`: Get an image from a media URL.
 
+A third method on `TwitterArchive` is available.
+- `.dmImagesOf`: Get all the medias affiliated to a Direct Message (currenly, only one is possible, but it's future proof). This method does not require to indicate if the DM is in a group conversation or not. 
+
 We assume that we have a DM in variable `message`, with `message.mediaUrls.length > 0`.
 The message does **not** come from a group conversation (`conversation.is_group_conversation === false`).
 
@@ -33,4 +36,13 @@ document.querySelector('img').src = url;
 const array_buffer = await archive.dmImageFromUrl(message.mediaUrls[0], false, true) as ArrayBuffer;
 // Write the file to disk
 fs.writeFileSync('test_dir/my_img.jpg', Buffer.from(array_buffer));
+
+// Get all the images
+// Second parameter indicate if medias should be returned as ArrayBuffer
+const all_images = await archive.dmImagesOf(message, true);
 ```
+
+## Continue
+
+Next part is [Explore favorites](https://github.com/alkihis/twitter-archive-reader/wiki/Explore-favorites).
+
