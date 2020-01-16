@@ -1,9 +1,13 @@
 ## Getting started
 
-Install package using NPM.
+Install package using NPM or Yarn.
 
 ```bash
 npm i twitter-archive-reader
+```
+or
+```bash
+yarn add twitter-archive-reader
 ```
 
 This package internally use [JSZip](https://stuk.github.io/jszip/documentation) to read ZIP archives, you can load archives in this module the same way you load them in JSZip.
@@ -68,33 +72,30 @@ new TwitterArchive(
    * Archive to load.
    * Can be a string (filename), number[], Uint8Array,
    * JSZip, Archive, ArrayBuffer and File objects.
+   * 
+   * If you want to build an archive instance **without** a file, you can pass `null` here.
+   * You must then load parts of the archive with `.loadArchivePart()` or `.loadClassicArchivePart()` !
    */
   file: AcceptedZipSources,
-  /** 
-   * If the file is a modern/GDPR archive, TwitterArchive
-   * will build the "extended" data. 
-   */
-  build_extended: boolean = true,
-  /** 
-   * After archive load, define if the dezipped archive 
-   * should stay in memory. 
-   * Setting this parameter to false could 
-   * reduce memory consumption.
-   * 
-   * In specific circonstances, the archive will 
-   * stay loaded even if this parameter is false.
-   */
-  keep_loaded: boolean = false,
-  /**
-   * In Twitter GDPR archives v2, tweet and dm images are in ZIP archives inside the ZIP.
-   * If `true`, TwitterArchive will extract its content in RAM to allow the usage of images.
-   * If `false`, DMs images will be unavailable.
-   * If `undefined`, Twitter will extract in RAM in browser mode, and leave the ZIP untouched in Node.js.
-   * 
-   * If you want to load the DM image ZIP present in the archive when you want, use `.loadCurrentDmImageZip()`. 
-   * **Please note that `keep_loaded` should be set to `true` to use this method !**
-   */
-  load_images_in_zip: boolean? = undefined
+  options: TwitterArchiveLoadOptions = {
+    /**
+     * In Twitter GDPR archives v2, tweet and dm images are in ZIP archives inside the ZIP.
+     * If `true`, TwitterArchive will extract its content in RAM to allow the usage of images.
+     * If `false`, DMs images will be unavailable.
+     * If `undefined`, Twitter will extract in RAM in browser mode, and leave the ZIP untouched in Node.js.
+     * 
+     * If you want to load the DM image ZIP present in the archive when you want, 
+     * use `.loadArchivePart({ current_dm_images: true })`. 
+     * **Please note that `keep_loaded` should be set to `true` to use this method !**
+     */
+    load_images_in_zip: boolean? = undefined,
+    /**
+     * Indicate if you want to parse ad data at build time (default=false).
+     * 
+     * If you want to differate, you can load ad data later with `.loadArchivePart({ current_ad_archive: true })`.
+     */
+    build_ad_archive?: boolean = false
+  }
 )
 ```
 
@@ -154,4 +155,4 @@ Linked to `.ready()` promise (rejected).
 
 ## Continue
 
-Next part is [Archive Properties](https://github.com/alkihis/twitter-archive-reader/wiki/Archive-properties). 
+Next part is [Archive Properties](./Archive-properties). 
