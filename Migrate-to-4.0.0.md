@@ -25,7 +25,7 @@ Option `build_extended_gdpr` is removed. "Extended" data is now systematically b
 
 #### Properties
 
-Most of the data that was before in `.extended_gpdr` property is moved to accessors in `TwitterArchive` instances.
+Most of the data that was before in `.extended_gdpr` property is moved to accessors in `TwitterArchive` instances.
 
 - `.extended_gdpr.moments` **=>** `.moments`: Access to Twitter moments
 - `.extended_gdpr.lists` **=>** `.lists`: Access to created and subscribed lists
