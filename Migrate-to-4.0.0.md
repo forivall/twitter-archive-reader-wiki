@@ -27,13 +27,13 @@ Option `build_extended_gdpr` is removed. "Extended" data is now systematically b
 
 Most of the data that was before in `.extended_gpdr` property is moved to accessors in `TwitterArchive` instances.
 
-- `.extended_gpdr.moments` **=>** `.moments`: Access to Twitter moments
-- `.extended_gpdr.lists` **=>** `.lists`: Access to created and subscribed lists
-- `.extended_gpdr.followers` **=>** `.followers`: Set of followers IDs
-- `.extended_gpdr.followings` **=>** `.followings`: Set of user IDs following the archive owner
-- `.extended_gpdr.mutes` **=>** `.mutes`: Set of muted user IDs
-- `.extended_gpdr.blocks` **=>** `.blocks`: Set of blocked user IDs
-- `.extended_gpdr.favorites` **=>** `.favorites`: New `FavoriteArchive` instance. See **new features** for more details
+- `.extended_gdpr.moments` **=>** `.moments`: Access to Twitter moments
+- `.extended_gdpr.lists` **=>** `.lists`: Access to created and subscribed lists
+- `.extended_gdpr.followers` **=>** `.followers`: Set of followers IDs
+- `.extended_gdpr.followings` **=>** `.followings`: Set of user IDs following the archive owner
+- `.extended_gdpr.mutes` **=>** `.mutes`: Set of muted user IDs
+- `.extended_gdpr.blocks` **=>** `.blocks`: Set of blocked user IDs
+- `.extended_gdpr.favorites` **=>** `.favorites`: New `FavoriteArchive` instance. See **new features** for more details
 
 If these accessors are invoked with a classic archive, containers will be empty (*empty array, or empty set*).
 
