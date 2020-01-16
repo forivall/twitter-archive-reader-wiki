@@ -1,10 +1,29 @@
-A `TweetSearcher` instance is available to find tweets into a `Iterable<PartialTweet>`.
+> A `TweetFinder` instance is available to find tweets into a `Iterable<PartialTweet>`.
+
+## Select your finder
+
+### Global
+
+A global instance is exposed by the module, with the name `TweetSearcher`.
 
 ```ts
+// TweetFinder instance is named TweetSearcher
 import { TweetSearcher } from 'twitter-archive-reader';
 
 // archive.tweets is iterable, so its ok
 TweetSearcher.search(archive.tweets, "My query");
+```
+
+### For each tweet archive
+
+Another `TweetFinder` instance is available in `archive.tweets.finder`.
+
+In a tweet archive, you can find quickly in all tweets with `archive.tweets.find(query, is_regex, static_validators, search_in)`.
+Parameters for this method are the same as the following, minus `tweets_array` (it in inferred to `archive.tweets.all`).
+
+```ts
+// Find directly in the archive
+archive.tweets.find("My query");
 ```
 
 ## Simple usage
@@ -86,6 +105,8 @@ Then, define your static validator into the `TweetSearcher.static_validators` pr
 TweetSearcher.static_validators.retweets_only = validateOnlyRetweets;
 ```
 
+> Note: To define validators on tweet archive's TweetFinder instance, use `archive.tweets.finder` instead of `TweetSearcher`.
+
 You've done it!
 
 ### Define a custom contextual validator
@@ -140,6 +161,8 @@ TweetSearcher.validators.push({
   validator: checkIfTweetIsMadeAfterDate,
 });
 ```
+
+> Note: To define validators on tweet archive's TweetFinder instance, use `archive.tweets.finder` instead of `TweetSearcher`.
 
 End-users can now use our custom validator is their queries !
 
