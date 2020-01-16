@@ -3,50 +3,46 @@ You can explore archive properties (creation date, owner...) by using the `Twitt
 ## Properties / Accessors
 
 - `.tweets`: Access to the `TweetArchive` instance.
-- `.owner`: User ID of the archive owner.
-- `.owner_screen_name`: Screen name of the archive owner.
+- `.user`: 
 - `.generation_date`: Archive creation date.
 - `.is_gdpr`: True if archive is a GDPR archive.
 - `.info`: Access to archive information. See `BasicArchiveInfo` interface.
+- `.is_zip_loaded`: True if ZIP is loaded in the object.
+- `.synthetic_info`: Quick info to summarize the archive.
+- `.hash`: Hash for loaded archive. Used to identifiate similar archives. Based on user details, tweet count and dm count.
 
 ## GDPR archive specificities
 
 Some properties are restricted for the GDPR archive.
 
 - `.messages`: Access to the `DMArchive` instance. Details for this property are available in the Direct Messages section.
-- `.extended_gdpr`: Access to GDPR's extended data (favorites, blocks...)
+- `.favorites`: Access to the `FavoriteArchive` instance. Details for this property are available in the Explore Favorites.
+- `.mutes`: Set of muted user IDs.
+- `.blocks`: Set of blocked user IDs.
+- `.followers`: Set of followers user IDs.
+- `.followings`: Set of followings user IDs.
+- `.moments`: Moments created by the user.
+- `.lists`: Registred/Created lists of the user.
 
-The extended GDPR is not computed, just parsed. This property follow this interface:
-```ts
-interface ExtendedGDPRInfo {
-  followers: Set<string>;
-  followings: Set<string>;
-  favorites: Set<string>;
-  mutes: Set<string>;
-  blocks: Set<string>;
-  lists: {
-    created: string[];
-    member_of: string[];
-    subscribed: string[];
-  };
-  personalization: InnerGDPRPersonalization;
-  screen_name_history: GPDRScreenNameHistory[];
-  protected_history: GPDRProtectedHistory[];
-  age_info: InnerGDPRAgeInfo;
-  moments: GDPRMoment[];
-}
-```
-For details for the inner types of this interface, see `ts/TwitterTypes.ts` file.
+- `.ads`: Access to the `AdArchive` instance. **By default, ad data is not constructed to save time and memory. To use this container, please add `build_ad_archive: true` in constructor options, or call `.loadArchivePart({ current_ad_archive: true })`**.
+
+- `.is_dm_images_available`: True if you have access to DM images. If this returns false, you might need to call `.loadArchivePart({ current_dm_images: true })` in order to get images to work.
+
 
 Specific methods:
 
-For details, see [Get a direct message media](https://github.com/alkihis/twitter-archive-reader/wiki/Get-a-direct-message-media) part.
+For details, see [Get a direct message media](./Get-a-direct-message-media.md) part.
 
 - `.dmImage(name: string, is_group: boolean, as_array_buffer: boolean)`: Extract direct message file from its name (returns a `Promise<Blob | ArrayBuffer>`).
 - `.dmImageFromUrl(url: string, is_group: boolean, as_array_buffer: boolean)`: Extract direct message file from the Twitter media URL contained in `DirectMessage` object (returns a `Promise<Blob | ArrayBuffer>`).
+- `.dmImagesOf(dm: string | DirectMessage, as_array_buffer: boolean)`: Extract all medias of a DM.
+
+Utilities:
+
+- `.releaseZip()`: If you don't need ZIP anymore (you don't use DM images for example), you can unload it here. It will free memory.
 
 
 ## Continue
 
-Next page is [Tweet access and manipulating tweets](https://github.com/alkihis/twitter-archive-reader/wiki/Tweet-access-and-manipulating-tweets).
+Next page is [User data](https://github.com/alkihis/twitter-archive-reader/wiki/User-data).
 
