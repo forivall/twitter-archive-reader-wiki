@@ -47,10 +47,10 @@ const archive = new TwitterArchive(document.querySelector('input[type="file"]').
 
 // Initialization can be long (unzipping, tweets & DMs reading...) 
 // So archive supports events, you can listen for initialization steps
-archive.addEventListener('zipready', () => {
+archive.events.on('zipready', () => {
   // ZIP is unzipped
 });
-archive.addEventListener('tweetsread', () => {
+archive.events.on('tweetsread', () => {
   // Tweet files has been read
 });
 // See all available listeners in Events section.
@@ -104,9 +104,10 @@ new TwitterArchive(
 Archive is quite long to read: You have to unzip, read tweets, read user informations, direct messages, and some other informations...
 So you might want to display current loading step to the end-user.
 
-The `TwitterArchive` provides a event system compatible with Node.js and classic browser JS.
+The `TwitterArchive` provides a event system compatible driven by the `events` package (native Node.js events).
+The event emitter is available at the `.events` property of the `TwitterArchive` object.
 
-You could listen to events with `.addEventListener()` method or `.on**event_name**` attributes, like DOM elements.
+You could listen to events with `.events.on()` method, and remove listener(s) with `.events.off()`.
 
 Events are listed in their order of apparition.
 
