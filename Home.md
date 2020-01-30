@@ -44,7 +44,7 @@ First, we will see how initialize the main class of the module, how to explore t
 5) Direct Messages
   - [Browsing Direct Message archive](./Browsing-Direct-Message-archive-(conversations))
   - [Browsing a single DM conversation](./Browsing-a-single-DM-conversation)
-  - [Get a direct message media](./Get-a-direct-message-media)
-6) [Explore favorites](./Explore-favorites.md)
-7) [Explore ad data](./Explore-ad-data)
+6) [Dealing with medias](./Dealing-with-medias)
+7) [Explore favorites](./Explore-favorites)
+8) [Explore ad data](./Explore-ad-data)
 
