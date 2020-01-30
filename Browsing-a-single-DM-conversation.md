@@ -146,6 +146,8 @@ If any event exists after or before a DM, property `.events` will not be defined
 In `.events.before` and `.events.after`, events are grouped by categories.
 See interface `DirectMessageEventsContainer` in `types/GDPRDMs.ts` file in order to see them and have a description of every available property.
 
+Used event names are the same as used in direct messages files / Twitter API.
+
 ```ts
 const conv = archive.messages.all[0];
 
