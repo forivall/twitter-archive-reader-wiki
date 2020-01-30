@@ -32,7 +32,7 @@ The following methods of `TwitterArchive` are **removed**:
 - `dmImageFromUrl()`
 - `dmImagesOf()`
 
-You can learn more about how `MediaArchive` works in [Dealing with medias](./Dealing-with-medias.md) part of the documentation.
+You can learn more about how `MediaArchive` works in [Dealing with medias](./Dealing-with-medias) part of the documentation.
 
 Here's the replacement for the deleted methods for DMs:
 - `.dmImage(name, is_group, as_array_buffer)` **=>** `.medias.get(is_group ? MediaArchiveType.GroupDM : MediaArchiveType.SingleDM, name, as_array_buffer)`
@@ -48,7 +48,7 @@ Events occurs on group conversations, like the conversation name change or a par
 
 To iterate on messages with events, use `Conversation.events(true)` generator.
 Learn more about direct message events in 
-[Browsing a single DM conversation](./Browsing-a-single-DM-conversation.md).
+[Browsing a single DM conversation](./Browsing-a-single-DM-conversation).
 // TODO refresh this page ^ !
 
 
