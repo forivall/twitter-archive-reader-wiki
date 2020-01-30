@@ -31,20 +31,3 @@ This module use **BigInt**, so at least **Node 10.4** or a **`BigInt` compatible
 Module will use a fallback to `big-integer` npm module if `BigInt` does not exists.
 **Please note that, for performance reasons, a `BigInt` compatible system is hugely recommended.**
 
-## Table of contents
-
-First, we will see how initialize the main class of the module, how to explore tweets in it, then we will explore direct messages.
-
-1) [Installation & Instantiation](./Installation-&-Instantiation)
-2) [Archive Properties](./Archive-properties)
-3) [User data](./User-data)
-4) Tweets
-  - [Tweet access and manipulating tweets](./Tweet-access-and-manipulating-tweets)
-  - [Search into tweets](./Search-into-tweets)
-5) Direct Messages
-  - [Browsing Direct Message archive](./Browsing-Direct-Message-archive-(conversations))
-  - [Browsing a single DM conversation](./Browsing-a-single-DM-conversation)
-6) [Dealing with medias](./Dealing-with-medias)
-7) [Explore favorites](./Explore-favorites)
-8) [Explore ad data](./Explore-ad-data)
-
