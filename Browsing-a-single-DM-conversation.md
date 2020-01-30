@@ -133,7 +133,7 @@ interface DirectMessage {
 
 Interface `LinkedDirectMessage`, that validate DMs in `Conversation` objects, add a `.previous` and `.next` property, linking the following and previous DM in the current conversation.
 
-To get medias linked in one message, please see [Dealing with medias](./Dealing-with-medias.md).
+To get medias linked in one message, please see [Dealing with medias](./Dealing-with-medias).
 
 ## Direct message events
 
