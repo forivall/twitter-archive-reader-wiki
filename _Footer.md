@@ -1,7 +1,5 @@
 ## Table of contents
 
-First, we will see how initialize the main class of the module, how to explore tweets in it, then we will explore direct messages.
-
 1) [Installation & Instantiation](./Installation-&-Instantiation)
 2) [Archive Properties](./Archive-properties)
 3) [User data](./User-data)
