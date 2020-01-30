@@ -1,4 +1,4 @@
-This page suppose you already obtain a `Conversation` object, through the `DMArchive` instance (see [Browsing Direct Message archive](https://github.com/alkihis/twitter-archive-reader/wiki/Browsing-Direct-Message-archive-(conversations))).
+This page suppose you already obtain a `Conversation` object, through the `DMArchive` instance (see [Browsing Direct Message archive](./Browsing-Direct-Message-archive-(conversations))).
 
 `Conversation` object will be named, for convention, `conversation`.
 
@@ -133,9 +133,84 @@ interface DirectMessage {
 
 Interface `LinkedDirectMessage`, that validate DMs in `Conversation` objects, add a `.previous` and `.next` property, linking the following and previous DM in the current conversation.
 
-To get medias linked in one message, please see [Get a direct message media](https://github.com/alkihis/twitter-archive-reader/wiki/Get-a-direct-message-media).
+To get medias linked in one message, please see [Dealing with medias](./Dealing-with-medias.md).
+
+## Direct message events
+
+Events are things created in group conversations in order to reflect things happenning in a discussion that are **not** messages.
+It includes conversation name change, participant join and leave, etc.
+
+You can see events that happen **before** and **after** a single message with properties `.events.before` and `.events.after`.
+If any event exists after or before a DM, property `.events` will not be defined.
+
+In `.events.before` and `.events.after`, events are grouped by categories.
+See interface `DirectMessageEventsContainer` in `types/GDPRDMs.ts` file in order to see them and have a description of every available property.
+
+```ts
+const conv = archive.messages.all[0];
+
+const msg = conv.single('dm_id');
+if (msg.events) {
+  if (msg.events.before) {
+    console.log(
+      "The followings events happended before the DM:", 
+      Object.entries(msg.events.before)
+        .map(([ev_type, events]) => `${ev_type} (${events.length} times)`)
+        .join(', ')
+    )
+  }
+  if (msg.events.after) {
+    console.log(
+      "The followings events happended after the DM:", 
+      Object.entries(msg.events.after)
+        .map(([ev_type, events]) => `${ev_type} (${events.length} times)`)
+        .join(', ')
+    )
+  }
+}
+```
+
+---
+
+You can also iterate over events, via helper `TwitterHelpers.getEventsFromMessages()` or via `Conversation.events()` method.
+
+```ts
+const conversation = archive.messages.all[0];
+
+// Get all events without messages...
+TwitterHelpers.getEventsFromMessages(conversation.all, /* include_messages = false */);
+// ...it is the same as
+conversation.events(/* include_messages = false */);
+```
+
+A single event is structured as:
+```ts
+event === {
+  [eventName]: {
+    createdAt: string, 
+    createdAtDate: Date,
+    ...(event properties)
+  }
+}
+
+// For example, here's a direct message event representating a message
+event = {
+  messageCreate: {
+    createdAt: 'xxx',
+    createdAtDate: Date,
+    text: 'xxx',
+    senderId: 'xxx',
+    recipientId?: 'xxx',
+    mediaUrls: ['xxx'],
+    id: 'xxx',
+    previous: null | LinkedDirectMessage,
+    next: null |  LinkedDirectMessage
+  }
+}
+```
+
 
 ## Continue
 
-Next part is [Get a direct message media](https://github.com/alkihis/twitter-archive-reader/wiki/Get-a-direct-message-media)
+Next part is [Dealing with medias](./Dealing-with-medias).
 
